@@ -14,7 +14,7 @@ response = requests.get(url, params=params)
 
 if response.status_code == 200:
     df = pd.DataFrame(response.json())
-    display(df.head(25))
+    print(df.head(5))
     
 else:
     print(f"Request failed with status code: {response.status_code}")
