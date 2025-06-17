@@ -14,9 +14,10 @@ params = [
 response = requests.get(url, params=params)
 
 if response.status_code == 200:
-    df = pd.DataFrame(response.json())
-    print(tabulate(df.head(5), headers='keys', tablefmt='pretty'))
-    
+    df = pd.DataFrame(response.json())    
+    df_preview = df.iloc[:5, :7]
+
+    # Print in tabular format
+    print(tabulate(df_preview, headers='keys', tablefmt='grid'))
 else:
-    print(f"Request failed with status code: {response.status_code}")
-    print(response.text)
+    print(f"Error fetching data: {response.status_code}")
