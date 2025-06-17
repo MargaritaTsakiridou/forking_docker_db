@@ -2,7 +2,7 @@
 FROM databricksruntime/standard:16.4-LTS
 
 # Create non-root user named deployment
-RUN useradd -m -u 1000 deployment
+RUN useradd -m deployment
 
 # Set working directory and ensure it's owned by the non-root user
 WORKDIR /app
