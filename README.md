@@ -13,12 +13,12 @@ By default, Databricks clusters run a managed environment you can't fully contro
 
 ## Files
 
-| File | Purpose |
-|---|---|
-| `Dockerfile` | Builds the container from the Databricks base image and installs dependencies |
-| `app.py` | Script that runs inside the container — calls the OneBenthic API and prints a preview |
-| `requirements.txt` | Python dependencies (`pandas`, `requests`, `tabulate`) |
-| `.github/workflows/docker-build.yml` | GitHub Actions workflow that builds and pushes the image to Docker Hub |
+| File | Purpose | Reuseable? |
+|---|---|---|
+| `Dockerfile` | Builds the container from the Databricks base image and installs dependencies | Basic template |
+| `app.py` | Script that runs inside the container. It calls the OneBenthic API and prints a preview | Probably not.. unless you want a fairly pointless app on your cluster |
+| `requirements.txt` | Python dependencies (`pandas`, `requests`, `tabulate`) | No |
+| `.github/workflows/docker-build.yml` | GitHub Actions workflow that builds and pushes the image to Docker Hub | Basic template |
 
 ## Building the image
 
