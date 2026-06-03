@@ -23,4 +23,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: tomkdefra/onebenthic-app:latest
+        tags: defradigital/dash-onebenthic:latest
