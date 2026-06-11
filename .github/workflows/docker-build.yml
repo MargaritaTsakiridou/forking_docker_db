@@ -23,4 +23,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: margaritatsakridou/dash-onebenthic:latest
+        tags: margaritatsakiridou/dash-onebenthic:latest
